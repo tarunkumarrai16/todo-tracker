@@ -26,7 +26,7 @@ mongoose
   })
   .catch((err) => console.log(err));
 
-const JWT_SECRET = "mysecretkey";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // helper function: delete data older than 7 days
 const cleanupOldActivities = async (userId) => {
