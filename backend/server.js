@@ -13,8 +13,8 @@ const Activity = require("./models/Activity");
 const app = express();
 
 app.use(cors({
-  origin : [
-    "https://frontend-plum-phi-70.vercel.app"
+  origin: [
+    "https://frontend-kjhpu7dob-tarun-kumar-rais-projects.vercel.app"
   ],
   credentials: true
 }));
