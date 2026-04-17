@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 mongoose
-  .connect("mongodb://todoAdmin:tarun1519@ac-g4fdgbh-shard-00-00.7vr2jkf.mongodb.net:27017,ac-g4fdgbh-shard-00-01.7vr2jkf.mongodb.net:27017,ac-g4fdgbh-shard-00-02.7vr2jkf.mongodb.net:27017/?ssl=true&replicaSet=atlas-lljyur-shard-0&authSource=admin&appName=Cluster0")
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB Atlas Connected");
     app.listen(process.env.PORT || 5000, () => {

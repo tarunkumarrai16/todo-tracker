@@ -9,7 +9,7 @@ import {
   ResponsiveContainer
 } from "recharts";
 
-const API = "http://localhost:5000";
+const API = "https://todo-backend-pywu.onrender.com";
 
 function App() {
   const [isLogin, setIsLogin] = useState(true);
@@ -251,6 +251,7 @@ function App() {
     setChartData(finalChartData);
   };
 
+  /* eslint-disable-next-line react-hooks/exhaustive-deps */
   useEffect(() => {
     if (token) {
       loadTasks();
@@ -260,6 +261,7 @@ function App() {
       getLast7Days();
     }
   }, [token, date]);
+  /* eslint-enable-next-line react-hooks/exhaustive-deps */
 
   if (!token) {
     return (
