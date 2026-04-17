@@ -251,7 +251,7 @@ function App() {
     setChartData(finalChartData);
   };
 
-  /* eslint-disable-next-line react-hooks/exhaustive-deps */
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     if (token) {
       loadTasks();
@@ -261,7 +261,7 @@ function App() {
       getLast7Days();
     }
   }, [token, date]);
-  /* eslint-enable-next-line react-hooks/exhaustive-deps */
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   if (!token) {
     return (

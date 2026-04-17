@@ -12,7 +12,12 @@ const Activity = require("./models/Activity");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin : [
+    "https://frontend-plum-phi-70.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 
