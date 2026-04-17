@@ -14,9 +14,10 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://frontend-kjhpu7dob-tarun-kumar-rais-projects.vercel.app"
-  ],
-  credentials: true
+    "https://frontend-plum-phi-70.vercel.app",
+    "https://frontend-lx6noo4if-tarun-kumar-rais-projects.vercel.app",
+    "https://frontend-git-main-tarun-kumar-rais-projects.vercel.app"
+  ]
 }));
 app.use(express.json());
 
