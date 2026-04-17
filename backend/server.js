@@ -13,14 +13,12 @@ const Activity = require("./models/Activity");
 const app = express();
 
 app.use(cors({
-  origin: [
-    "https://frontend-plum-phi-70.vercel.app",
-    "https://frontend-lx6noo4if-tarun-kumar-rais-projects.vercel.app",
-    "https://frontend-git-main-tarun-kumar-rais-projects.vercel.app"
-  ]
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
-app.use(express.json());
 
+app.use(express.json());
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -341,6 +339,3 @@ app.get("/last-7-days", auth, async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
